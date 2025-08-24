@@ -1,0 +1,12 @@
+# Ignore the node_modules directory, where dependencies are stored
+node_modules/
+
+# Ignore environment variables files, which contain secrets
+.env
+.env.local
+
+# Ignore log files
+*.log
+
+# Ignore temporary system files
+.DS_Store
