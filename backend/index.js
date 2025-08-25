@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser'
 import { connectDb } from './db.js'
 import { GoogleGenerativeAI } from '@google/generative-ai' // correct import
 
+const clientURL = process.env.CLIENT_URL || 'http://localhost:5173'
 const app = express()
 
 const PORT = process.env.PORT || 3001
@@ -16,7 +17,7 @@ import authRoutes from './routes/auth.routes.js'
 // Middleware
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: clientURL,
     credentials: true,
   })
 )
