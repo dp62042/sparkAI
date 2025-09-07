@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "http://localhost:8080",
+  "proxy": "import.meta.env.VITE_API_KEY",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

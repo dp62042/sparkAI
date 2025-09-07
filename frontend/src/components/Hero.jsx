@@ -5,6 +5,7 @@ import axios from 'axios'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Loader2, Copy, Share2, Check } from 'lucide-react'
 import OutputFormatter from './OutputFormatter'
+const API_URL = import.meta.env.VITE_API_URL
 
 const Hero = () => {
   const [input, setInput] = useState('')
@@ -17,7 +18,7 @@ const Hero = () => {
     setIsLoading(true)
     setOutput('')
     try {
-      const response = await axios.post(`http://localhost:8080/ai`, {
+      const response = await axios.post(`${API_URL}/ai`, {
         prompt: input,
       })
       setOutput(response.data.response)

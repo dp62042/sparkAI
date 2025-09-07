@@ -3,6 +3,7 @@ import React, { useContext } from 'react' // Import useContext
 import { Link, useNavigate } from 'react-router-dom'
 // Import your AuthContext, ensuring the path is correct relative to this file.
 import { AuthContext } from '../components/AuthProvider.jsx'
+const API_URL = import.meta.env.VITE_API_URL
 
 const Login = () => {
   const [formData, setFormData] = React.useState({ email: '', password: '' })
@@ -28,7 +29,7 @@ const Login = () => {
 
     try {
       // Make the API call to your backend
-      const res = await fetch(`/api/auth/login`, {
+      const res = await fetch(`${API_URL}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

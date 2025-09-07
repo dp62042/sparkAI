@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+const API_URL = import.meta.env.VITE_API_URL
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ const Signup = () => {
     setError(null)
 
     try {
-      const res = await fetch(`/api/auth/register`, {
+      const res = await fetch(`${API_URL}/api/auth/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
