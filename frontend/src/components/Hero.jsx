@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import axios from 'axios'
@@ -16,7 +17,7 @@ const Hero = () => {
     setIsLoading(true)
     setOutput('')
     try {
-      const response = await axios.post('http://localhost:8080/ai', {
+      const response = await axios.post(`http://localhost:8080/ai`, {
         prompt: input,
       })
       setOutput(response.data.response)

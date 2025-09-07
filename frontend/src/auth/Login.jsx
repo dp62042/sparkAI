@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { useContext } from 'react' // Import useContext
 import { Link, useNavigate } from 'react-router-dom'
 // Import your AuthContext, ensuring the path is correct relative to this file.
@@ -27,7 +28,7 @@ const Login = () => {
 
     try {
       // Make the API call to your backend
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch(`/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

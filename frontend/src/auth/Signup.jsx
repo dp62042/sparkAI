@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
@@ -26,7 +27,7 @@ const Signup = () => {
     setError(null)
 
     try {
-      const res = await fetch('/api/auth/register', {
+      const res = await fetch(`/api/auth/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

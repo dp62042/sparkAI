@@ -16,7 +16,7 @@ const OutputFormatter = ({ text }) => {
       if (i >= text.length) {
         clearInterval(interval)
       }
-    }, 25) // typing speed
+    }, 10) // typing speed
 
     return () => clearInterval(interval)
   }, [text])
