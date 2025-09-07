@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: import.meta.env.VITE_API_KEY,
+        target: process.env.VITE_API_KEY,
         secure: false,
       },
     },
